@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HelloController;
+// use Illuminate\Support\Facades\Http;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', function(){
-    return '<html><body><h1>Hello</h1><p>This is sample page.</p></body></html>';
-});
+
+// Route::get('hello', 'HelloController@index'); // Laravel 8から記載形式が変わったのでこれはNG
+Route::get('hello', [HelloController::class, 'index']);
+Route::get('hello/other', [HelloController::class, 'other']);
