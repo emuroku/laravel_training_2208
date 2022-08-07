@@ -19,3 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
+Route::get('hello/{id?}', [HelloController::class, 'index']);
+// Route::get('hello', 'HelloController@index');
+=======
+>>>>>>> 65e32639189d9a5597a09e9ba664d5c89bb61517
