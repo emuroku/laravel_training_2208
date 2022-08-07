@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 class HelloController extends Controller
 {
     //
-    public function index(){
-        $data = ['msg' => 'これはコントローラから渡されたメッセージです。'];
-        var_dump($data);
-        return view('hello.index', $data);
+    public function index($id='zero'){
+      $data = [
+        'msg' => 'これはコントローラから渡されたメッセージです。',
+        'id' => $id
+      ];
+
+      return view('hello.index', $data);
     }
 }
