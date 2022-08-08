@@ -9,12 +9,15 @@
     </head>
     <body>
         <h1>Blade/Index</h1>
-        <p>{{$msg}}</p>
+        @isset ($msg)
+        <p>こんにちは。{{$msg}}さん。</p>
+        @else
+        <p>なにか書いてください。</p>
+        @endisset
         <form method="post" action="/hello">
             @csrf
             <input type="text" name="msg">
             <input type="submit">
-        </form>
-    </body>
+        </body>
 </html>
 
