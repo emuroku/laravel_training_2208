@@ -8,16 +8,19 @@ use Illuminate\Http\Request;
 class HelloController extends Controller
 {
     //
-<<<<<<< HEAD
-    public function index($id='zero'){
-      $data = [
-        'msg' => 'これはコントローラから渡されたメッセージです。',
-        'id' => $id
-      ];
+   public function index(){
 
-      return view('hello.index', $data);
-=======
+        $data = [
+            'msg' => 'お名前を入力してください',
+        ];
+    return view('hello.index', $data);
+   }
 
->>>>>>> 65e32639189d9a5597a09e9ba664d5c89bb61517
-    }
+   public function post(Request $request){
+        $msg = $request -> msg;
+        $data = [
+            'msg' => 'こんにちは、'. $msg . 'さん！',
+        ];
+        return view('hello.index', $data);
+   }
 }
