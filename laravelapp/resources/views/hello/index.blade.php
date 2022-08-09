@@ -9,15 +9,18 @@
     </head>
     <body>
         <h1>Blade/Index</h1>
-        @isset ($msg)
-        <p>こんにちは。{{$msg}}さん。</p>
-        @else
-        <p>なにか書いてください。</p>
-        @endisset
-        <form method="post" action="/hello">
-            @csrf
-            <input type="text" name="msg">
-            <input type="submit">
-        </body>
+        <p>&#064;forディレクティブの例</p>
+        <ol>
+            @php
+            $counter = 0;
+            @endphp
+            @while($counter < count($data))
+            <li>{{$data[$counter]}}</li>
+            @php
+            $counter ++;
+            @endphp
+            @endwhile
+        </ol>
+    </body>
 </html>
 
