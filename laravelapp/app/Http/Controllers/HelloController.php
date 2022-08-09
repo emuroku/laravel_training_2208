@@ -10,7 +10,8 @@ class HelloController extends Controller
     //
    public function index(){
 
-    return view('hello.index');
+    $data = ['shownu', 'minhyuk', 'kihyun', 'hyumgwon', 'jooheon', 'im'];
+    return view('hello.index', ['data'=>$data]);
    }
 
    public function post(Request $request){
