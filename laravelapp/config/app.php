@@ -126,7 +126,7 @@ return [
     'cipher' => 'AES-256-CBC',
 
     /*
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------
     | Maintenance Mode Driver
     |--------------------------------------------------------------------------
     |
@@ -195,7 +195,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        // カスタムしたプロバイダの追加
+        // カスタムしたサービスプロバイダの追加
         App\Providers\HelloServiceProvider::class,
 
     ],

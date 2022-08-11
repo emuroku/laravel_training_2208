@@ -3,6 +3,7 @@
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
