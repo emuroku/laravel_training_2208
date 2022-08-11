@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HelloController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('hello', [HelloController::class, 'index']);
+
+Route::post('hello', [HelloController::class, 'post']);
+// Route::get('hello', 'HelloController@index');
 
